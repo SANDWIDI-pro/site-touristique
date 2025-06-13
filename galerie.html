@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galerie - Ouagadougou</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.jpg" alt="Logo Ouagadougou" id="logo" />
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="patrimoine.html">Patrimoine</a></li>
+      <li><a href="reservation.html">Réservation d'hôtel</a></li>
+      <li><a href="galerie.html" class="active">Galerie</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Galerie Photo</h1>
+    <div class="gallery">
+      <img src="images/moogo.jpg" alt="Palais du Moogho Naaba" />
+      <img src="images/cathedrale.jpg" alt="Cathédrale de Ouagadougou" />
+      <img src="images/mosquee.jpg" alt="Grande Mosquée" />
+      <img src="images/heros.jpg" alt="Monument des Héros" />
+      <img src="images/sankara.jpg" alt="Mémorial Thomas Sankara" />
+      <img src="images/revolution.jpg" alt="Place de la Révolution" />
+      <img src="images/martyrs.jpg" alt="Monument des Martyrs" />
+      <img src="images/yennenga.jpg" alt="Statue Yennenga" />
+      <img src="images/stade.jpg" alt="Stade du 4 Août" />
+      <img src="images/musee.jpg" alt="Musée National" />
+      <img src="images/etoiles.jpg" alt="Rue des Étoiles" />
+      <img src="images/artisanat.jpg" alt="Village Artisanal" />
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ville de Ouagadougou. Tous droits réservés.</p>
+  </footer>
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+<script>
+  const images = document.querySelectorAll(".gallery img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "block";
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+    }
+  });
+</script>
+
+</body>
+</html>

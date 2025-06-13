@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Réservation d'hôtel - Ouagadougou</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.jpg" alt="Logo Ouagadougou" id="logo" />
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="patrimoine.html">Patrimoine</a></li>
+      <li><a href="reservation.html" class="active">Réservation d'hôtel</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Réservation d'hôtel</h1>
+    <form action="#" method="post">
+      <label for="nom">Nom complet :</label><br />
+      <input type="text" id="nom" name="nom" required /><br /><br />
+
+      <label for="email">Email :</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="tel">Téléphone :</label><br />
+      <input type="tel" id="tel" name="tel" required /><br /><br />
+
+      <label for="date-arrivee">Date d'arrivée :</label><br />
+      <input type="date" id="date-arrivee" name="date-arrivee" required /><br /><br />
+
+      <label for="date-depart">Date de départ :</label><br />
+      <input type="date" id="date-depart" name="date-depart" required /><br /><br />
+
+      <label for="chambres">Nombre de chambres :</label><br />
+      <input type="number" id="chambres" name="chambres" min="1" max="10" required /><br /><br />
+
+      <label for="type-chambre">Type de chambre :</label><br />
+      <select id="type-chambre" name="type-chambre" required>
+        <option value="">--Choisissez--</option>
+        <option value="simple">Simple</option>
+        <option value="double">Double</option>
+        <option value="suite">Suite</option>
+      </select><br /><br />
+
+      <label for="commentaires">Commentaires / Demandes spéciales :</label><br />
+      <textarea id="commentaires" name="commentaires" rows="4"></textarea><br /><br />
+
+      <button type="submit">Envoyer la réservation</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ville de Ouagadougou. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
